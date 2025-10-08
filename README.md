@@ -1,21 +1,42 @@
 
-# Paper Submission – Data and Scorer
+# PEET Scorer (Post-Editing Effort in Time) – Data and Model Scorer
 
-We provide the dataset, scripts, models, and evaluation code used in our paper:  
-**Anonymized Paper Name - PEET Scorer**.
+We provide the dataset, scripts, models, and evaluation code used in our paper:
+> [Time Is Effort: Estimating Human Post-Editing Time for Grammar Error Correction Tool Evaluation](https://arxiv.org/abs/2510.04394)<br>
+>[(Ankit Vadehra, Bill Johnson, Gene Saunders, Pascal Poupart)]
+> [(Accepted for publication in the 4th HCI+NLP Workshop (Fourth Workshop on Bridging Human-Computer Interaction and Natural Language Processing; part of EMNLP 2025)](https://sites.google.com/view/hciandnlp/home) <br>
 
 This repository contains:
 - **Datasets/** - GEC Tool output for CONLL14 and BEA19 GEC Datasets along with the final Editor Corrections.
-- **Models/** - (Statistical and Neural)  Regression for PEET Scorer.
-- **Scripts/**  - Script to calculate regression coefficient and PEET Scorer tool to evaluate GEC Tools.
+- **Models/** - (Statistical and Neural) Regression for PEET Scorer.
+- **Scripts/** - Script to calculate regression coefficient and PEET Scorer tool to evaluate GEC Tools.
 - **``README.md``** - File explaining all the Supplementary Material.
+
+---
+
+## 📂 Citation
+
+If you use or build upon this dataset and work in your research, please cite the corresponding publication.
+(official citation to be updated upon publication!)
+```
+@misc{vadehra2025timeeffortestimatinghuman,
+      title={Time Is Effort: Estimating Human Post-Editing Time for Grammar Error Correction Tool Evaluation}, 
+      author={Ankit Vadehra and Bill Johnson and Gene Saunders and Pascal Poupart},
+      year={2025},
+      eprint={2510.04394},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2510.04394},
+}
+}
+```
 
 ---
 
 ## 📂 Dataset
 
-The `Dataset` folder contains text files with GEC Tool outputs and Editor Targetted Corrections for two test sets: 
-- [CONLL14](https://www.comp.nus.edu.sg/~nlp/conll14st.html) : The CoNLL-2014 Shared Task on Grammatical Error Correction -  https://aclanthology.org/W14-1701/
+The `Dataset` folder contains text files with GEC Tool outputs and Editor Targetted Corrections for two test sets:
+- [CONLL14](https://www.comp.nus.edu.sg/~nlp/conll14st.html) : The CoNLL-2014 Shared Task on Grammatical Error Correction - https://aclanthology.org/W14-1701/
 - [BEA19](https://www.cl.cam.ac.uk/research/nl/bea2019st/) : The BEA-2019 Shared Task on Grammatical Error Correction - https://aclanthology.org/W19-4406/
 
 The GEC Tools used for first-pass correction on the datasets were:
@@ -37,7 +58,7 @@ For each dataset, we provide the following files:
 We list the files to train different PEET Scorer models.
 
 ### **1. Statistical Model**
-- **File:** [`stat_regression.py`](./Models/stat_regression.py)  
+- **File:** [`stat_regression.py`](./Models/stat_regression.py)
 - **Description:** Implements a Linear-Ridge and SVR based regression models using different extracted features (edit-types + sentence structure features). (small = 4, medium = 25, or, large = 55 Edit Types)
 - **Requirements:** [`req_python3.12.10.txt`](./Models/req_python3.12.10.txt)
 - **Example Run:**
@@ -46,11 +67,11 @@ We list the files to train different PEET Scorer models.
 ```
 
 ### **2. Neural Model** (`Models/Neural Model/`)
--   **Files:**
-    -   `bert.py` – Training file for BERT/RoBERTa models using Sentence Edit and POS-Syntax features.
-    -   `bert_syntax_parse.py` – Training file for BERT/RoBERTa models using Parse Tree Syntactic Variation features.
-    -   `eval.py` – Evaluate and print the results saved from the training run of `bert.py`
-    -   `req_python3.11.3.txt` – Python Installation dependencies
+-**Files:**
+    - `bert.py` – Training file for BERT/RoBERTa models using Sentence Edit and POS-Syntax features.
+    - `bert_syntax_parse.py` – Training file for BERT/RoBERTa models using Parse Tree Syntactic Variation features.
+    - `eval.py` – Evaluate and print the results saved from the training run of `bert.py`
+    - `req_python3.11.3.txt` – Python Installation dependencies
  - **Example Run:**
  ```
 >>> CUDA_VISIBLE_DEVICES=0 python bert.py --data_type mo_trg --model_type bert-large-cased
@@ -80,7 +101,7 @@ The **`Scripts/`** folder contains utilities for scoring and evaluating GEC Tool
 - **`wer.py`** - Computes the average WER for each hypothesis file used in the paper Human Judgment Ranking comparison.
 - **Example Run:**
 ```
-Instructions : 
+Instructions :
 	1)Copy all GEC Tool Corrections to be evaluated in MO/ folder
 	2)Copy all available dataset Target Refereces in the REF/ folder. Ideally these should be Post-Edited Corrections.
 >>> python genM2.py
@@ -96,6 +117,3 @@ Please find and download the GEC Evaluation Datasets used in this paper and for 
 - [Napoles-FCE / Napoles-Wiki](https://github.com/grammarly/GMEG) : Enabling Robust Grammatical Error Correction in New Domains: Data Sets, Metrics, and Analyses - https://github.com/grammarly/GMEG
 
 ---
-
-
-        
