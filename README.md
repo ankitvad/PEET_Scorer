@@ -3,8 +3,8 @@
 
 We provide the dataset, scripts, models, and evaluation code used in our paper:
 > [Time Is Effort: Estimating Human Post-Editing Time for Grammar Error Correction Tool Evaluation](https://arxiv.org/abs/2510.04394)<br>
->[(Ankit Vadehra, Bill Johnson, Gene Saunders, Pascal Poupart)]
-> [(Accepted for publication in the 4th HCI+NLP Workshop (Fourth Workshop on Bridging Human-Computer Interaction and Natural Language Processing; part of EMNLP 2025)](https://sites.google.com/view/hciandnlp/home) <br>
+>(Ankit Vadehra, Bill Johnson, Gene Saunders, Pascal Poupart)<br>
+>Accepted for publication in the 4th HCI+NLP Workshop (Fourth Workshop on Bridging Human-Computer Interaction and Natural Language Processing; part of EMNLP 2025)<br>
 
 This repository contains:
 - **Datasets/** - GEC Tool output for CONLL14 and BEA19 GEC Datasets along with the final Editor Corrections.
