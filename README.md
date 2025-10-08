@@ -28,7 +28,6 @@ If you use or build upon this dataset and work in your research, please cite the
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2510.04394},
 }
-}
 ```
 
 ---
