@@ -2,9 +2,10 @@
 # PEET Scorer (Post-Editing Effort in Time) – Data and Model Scorer
 
 We provide the dataset, scripts, models, and evaluation code used in our paper:
-> [Time Is Effort: Estimating Human Post-Editing Time for Grammar Error Correction Tool Evaluation](https://arxiv.org/abs/2510.04394)<br>
+> [Time Is Effort: Estimating Human Post-Editing Time for Grammar Error Correction Tool Evaluation](https://aclanthology.org/2025.hcinlp-1.15/)<br>
 >(Ankit Vadehra, Bill Johnson, Gene Saunders, Pascal Poupart)<br>
 >Accepted for publication in the 4th HCI+NLP Workshop (Fourth Workshop on Bridging Human-Computer Interaction and Natural Language Processing; part of EMNLP 2025)<br>
+>[\[Poster\]](./Misc/PEET_Poster_HCI_NLP.pdf) [\[Slide\]](./Misc/PPT_PEET.pdf)
 
 This repository contains:
 - **Datasets/** - GEC Tool output for CONLL14 and BEA19 GEC Datasets along with the final Editor Corrections.
@@ -19,14 +20,30 @@ This repository contains:
 If you use or build upon this dataset and work in your research, please cite the corresponding publication.
 (official citation to be updated upon publication!)
 ```
-@misc{vadehra2025timeeffortestimatinghuman,
-      title={Time Is Effort: Estimating Human Post-Editing Time for Grammar Error Correction Tool Evaluation}, 
-      author={Ankit Vadehra and Bill Johnson and Gene Saunders and Pascal Poupart},
-      year={2025},
-      eprint={2510.04394},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2510.04394},
+@inproceedings{vadehra-etal-2025-time,
+    title = "Time Is Effort: Estimating Human Post-Editing Time for Grammar Error Correction Tool Evaluation",
+    author = "Vadehra, Ankit  and
+      Johnson, Bill  and
+      Saunders, Gene  and
+      Poupart, Pascal",
+    editor = "Blodgett, Su Lin  and
+      Curry, Amanda Cercas  and
+      Dev, Sunipa  and
+      Li, Siyan  and
+      Madaio, Michael  and
+      Wang, Jack  and
+      Wu, Sherry Tongshuang  and
+      Xiao, Ziang  and
+      Yang, Diyi",
+    booktitle = "Proceedings of the Fourth Workshop on Bridging Human-Computer Interaction and Natural Language Processing (HCI+NLP)",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.hcinlp-1.15/",
+    doi = "10.18653/v1/2025.hcinlp-1.15",
+    pages = "178--196",
+    ISBN = "979-8-89176-353-1",
 }
 ```
 
